@@ -3,12 +3,15 @@ import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import ParallaxText from "@/components/Parallax";
 import heroCarousel1 from "@/assets/hero-carousel-1.png";
 import heroCarousel2 from "@/assets/hero-carousel-2.png";
 import heroCarousel3 from "@/assets/hero-carousel-3.png";
 import heroCarousel4 from "@/assets/hero-carousel-4.png";
 import aboutPhoto from "@/assets/about-photo.png";
-import portfolio1 from "@/assets/portfolio-1.png";
+import portfolio1 from "@/assets/portfolio-3.png";
+import portfolio2 from "@/assets/portfolio-2.png";
+
 import quotesIcon from "@/assets/quotes-icon.png";
 import hero1 from "@/assets/hero-1.png";
 import hero2 from "@/assets/hero-2.png";
@@ -33,7 +36,7 @@ export default function Home() {
   const year = new Date().getFullYear();
   return (
     <>
-      <div className="hero-section relative bg-secondary  ">
+      <div className="hero-section relative bg-secondary h-auto md:h-[90vh] ">
         <Navbar />
         <Image
           className="absolute left-0 top-0 z-0 md:block hidden"
@@ -104,7 +107,7 @@ export default function Home() {
       </div>
       <hr />
 
-      <Carousel
+      {/* <Carousel
         opts={{
           align: "start",
           loop: true,
@@ -117,9 +120,15 @@ export default function Home() {
             stopOnMouseEnter: true,
           }),
         ]}
-        className="w-full max-w-[1520px] bg-gradient-to-b from-secondary to-background"
+        className="w-full  bg-gradient-to-b from-secondary to-background"
       >
         <CarouselContent>
+          <CarouselItem className="basis-8/12 md:basis-1/4">
+            <Image src={heroCarousel1} alt="carousel" />
+          </CarouselItem>
+          <CarouselItem className="basis-8/12 md:basis-1/4">
+            <Image src={heroCarousel2} alt="carousel" />
+          </CarouselItem>
           <CarouselItem className="basis-8/12 md:basis-1/4">
             <Image src={heroCarousel1} alt="carousel" />
           </CarouselItem>
@@ -130,17 +139,23 @@ export default function Home() {
             <Image src={heroCarousel3} alt="carousel" />
           </CarouselItem>
           <CarouselItem className="basis-8/12 md:basis-1/4">
+            <Image src={heroCarousel1} alt="carousel" />
+          </CarouselItem>
+          <CarouselItem className="basis-8/12 md:basis-1/4">
             <Image src={heroCarousel4} alt="carousel" />
           </CarouselItem>
           <CarouselItem className="basis-8/12 md:basis-1/4">
             <Image src={heroCarousel2} alt="carousel" />
           </CarouselItem>
         </CarouselContent>
-      </Carousel>
+      </Carousel> */}
+
+      <ParallaxText baseVelocity={5} />
+      <ParallaxText baseVelocity={-5} />
 
       <hr />
 
-      <div id="about">
+      <div id="about" className="flex justify-center">
         <div className="flex flex-col md:flex-row gap-6 md:gap-12 px-5 md:px-20 py-20">
           <div>
             <Image src={aboutPhoto} alt="about photo" />
@@ -225,141 +240,175 @@ export default function Home() {
           </p>
         </div>
       </div>
+      <div className="bg-[#373B4C] rounded-b-[40px] md:rounded-b-[80px] ">
+        <div
+          id="portfolio"
+          className="w-full max-w-[1520px] mx-auto text-base md:text-lg px-5 md:px-20 flex flex-col gap-20 md:gap-24 py-20 "
+        >
+          <div className=" flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+            <Image
+              src={portfolio1}
+              alt="portfolio1"
+              className="w-1/2 rounded-xl"
+            />
+            <div className="w-full">
+              <h3 className="font-display text-4xl md:text-[48px] mb-4 md:mb-8 leading-normal">
+                Scube Center
+              </h3>
+              <p className="leading-7 font-light">
+                S-CUBE Center means 3S, which are SNU, Samick, and
+                Sustainability. S-Cube is an innovation center that focuses on
+                developing sustainable social empowerment programs in
+                technology, education, business, and others.
+              </p>
+              <div className="flex gap-8 mt-4 mb-6">
+                <div>
+                  <h5 className="font-bold text-xl mb-1">Tools</h5>
+                  <p>Nextjs, react, tailwind, figma</p>
+                </div>
+                <div>
+                  <h5 className="font-bold text-xl mb-1">Duration</h5>
+                  <p>2 Month</p>
+                </div>
+              </div>
+              <div className="flex gap-4 flex-wrap">
+                <Link href="https://scube.unram.ac.id/" target="_blank">
+                  <Button>Live Preview</Button>
+                </Link>
+                <Button variant="outline">Study Case</Button>
+                <Link
+                  href="https://github.com/Melkijo/scube-web"
+                  target="_blank"
+                >
+                  <Button variant="outline">Github</Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row-reverse gap-8 md:gap-12 items-center">
+            <Image
+              src={portfolio2}
+              alt="portfolio1"
+              className="rounded-xl w-1/2"
+            />
+            <div className="w-full">
+              <h3 className="font-display text-4xl md:text-[48px] mb-4 md:mb-8 leading-snug">
+                UKM Oikumene
+              </h3>
+              <p className="leading-7 font-light">
+                Ukm Oikumene is a Catholic Christian religious organization that
+                operates within the University of Mataram. This organization was
+                founded with the main aim of becoming a forum for Catholic
+                Christian students and students on campus, where they can unite
+                in worship together and strengthen their spiritual ties.
+              </p>
+              <div className="flex gap-8 mt-4 mb-6">
+                <div>
+                  <h5 className="font-bold text-xl mb-1">Tools</h5>
+                  <p>Nextjs, react, tailwind, figma</p>
+                </div>
+                <div>
+                  <h5 className="font-bold text-xl mb-1">Duration</h5>
+                  <p>2 Month</p>
+                </div>
+              </div>
+              <div className="flex gap-4 flex-wrap">
+                <Link href="https://ukm-oikumene.vercel.app/" target="_blank">
+                  <Button>Live Preview</Button>
+                </Link>
+                <Link
+                  href="https://www.behance.net/gallery/191387851/UKM-Oikumene-Website-Design"
+                  target="_blank"
+                >
+                  <Button variant="outline">Study Case</Button>
+                </Link>
+                <Link
+                  href="https://github.com/Melkijo/oikumene-web"
+                  target="_blank"
+                >
+                  <Button variant="outline">Github</Button>
+                </Link>
+              </div>
+            </div>
+          </div>
 
-      <div
-        id="portfolio"
-        className="w-full text-base md:text-lg px-5 md:px-20 bg-[#373B4C] flex flex-col gap-20 md:gap-24 py-20 rounded-b-[40px] md:rounded-b-[80px]"
-      >
-        <div className=" flex flex-col md:flex-row gap-8 md:gap-12 items-center">
-          <Image src={portfolio1} alt="portfolio1" />
-          <div className="w-full">
-            <h3 className="font-display text-4xl md:text-[48px] mb-4 md:mb-8 leading-normal">
-              Scube Center
-            </h3>
-            <p className="leading-7 font-light">
-              S-CUBE Center means 3S, which are SNU, Samick, and Sustainability.
-              S-Cube is an innovation center that focuses on developing
-              sustainable social empowerment programs in technology, education,
-              business, and others.
-            </p>
-            <div className="flex gap-8 mt-4 mb-6">
-              <div>
-                <h5 className="font-bold text-xl mb-1">Tools</h5>
-                <p>Nextjs, react, tailwind, figma</p>
+          <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+            <Image
+              src={portfolio1}
+              alt="portfolio1"
+              className="rounded-xl w-1/2"
+            />
+            <div className="w-full">
+              <h3 className="font-display text-4xl md:text-[48px] mb-4 md:mb-8">
+                Lagoonbay
+              </h3>
+              <p className="leading-7 font-light">
+                Lagoonbay For Tomorrow is an integrated residential area that
+                offers exclusive villas and a plaza. With an aesthetic beach
+                resort design, this area is strategically located and centrally
+                located in the popular tourist destination Lombok Beach.
+              </p>
+              <div className="flex gap-8 mt-4 mb-6">
+                <div>
+                  <h5 className="font-bold text-xl mb-1">Tools</h5>
+                  <p>Wordpress, Elementor</p>
+                </div>
+                <div>
+                  <h5 className="font-bold text-xl mb-1">Duration</h5>
+                  <p>2 Month</p>
+                </div>
               </div>
-              <div>
-                <h5 className="font-bold text-xl mb-1">Duration</h5>
-                <p>2 Month</p>
+              <div className="flex gap-4 flex-wrap">
+                <Link href="https://www.lagoonbay.id/" target="_blank">
+                  <Button>Live Preview</Button>
+                </Link>
+                <Button variant="outline">Study Case</Button>
+                <Button variant="outline">Github</Button>
               </div>
-            </div>
-            <div className="flex gap-4 flex-wrap">
-              <Link href="https://scube.unram.ac.id/" target="_blank">
-                <Button>Live Preview</Button>
-              </Link>
-              <Button variant="outline">Study Case</Button>
-              <Button variant="outline">Github</Button>
             </div>
           </div>
-        </div>
-        <div className="flex flex-col md:flex-row-reverse gap-8 md:gap-12 items-center">
-          <Image src={portfolio1} alt="portfolio1" className="" />
-          <div className="w-full">
-            <h3 className="font-display text-4xl md:text-[48px] mb-4 md:mb-8 leading-snug">
-              UKM Oikumene
-            </h3>
-            <p className="leading-7 font-light">
-              Ukm Oikumene is a Catholic Christian religious organization that
-              operates within the University of Mataram. This organization was
-              founded with the main aim of becoming a forum for Catholic
-              Christian students and students on campus, where they can unite in
-              worship together and strengthen their spiritual ties.
-            </p>
-            <div className="flex gap-8 mt-4 mb-6">
-              <div>
-                <h5 className="font-bold text-xl mb-1">Tools</h5>
-                <p>Nextjs, react, tailwind, figma</p>
+          <div className="flex flex-col md:flex-row-reverse gap-8 md:gap-12 items-center">
+            <Image
+              src={portfolio1}
+              alt="portfolio1"
+              className="rounded-xl w-1/2"
+            />
+            <div className="w-full">
+              <h3 className="font-display text-4xl md:text-[48px] mb-4 md:mb-8 ">
+                BeasiswaKita
+              </h3>
+              <p className="leading-7 font-light">
+                We are an educational start-up that operates in the field of
+                providing scholarship information. Our vision is to provide
+                equal opportunities for everyone to access better education
+                through the dissemination of accurate and reliable scholarship
+                information.
+              </p>
+              <div className="flex gap-8 mt-4 mb-6">
+                <div>
+                  <h5 className="font-bold text-xl mb-1">Tools</h5>
+                  <p>React, tailwind, figma</p>
+                </div>
+                <div>
+                  <h5 className="font-bold text-xl mb-1">Duration</h5>
+                  <p>2 Weeks</p>
+                </div>
               </div>
-              <div>
-                <h5 className="font-bold text-xl mb-1">Duration</h5>
-                <p>2 Month</p>
+              <div className="flex gap-4 flex-wrap">
+                <Link href="https://beasiswakita.vercel.app/" target="_blank">
+                  <Button>Live Preview</Button>
+                </Link>
+                <Button variant="outline">Study Case</Button>
+                <Button variant="outline">Github</Button>
               </div>
-            </div>
-            <div className="flex gap-4 flex-wrap">
-              <Link href="https://ukm-oikumene.vercel.app/" target="_blank">
-                <Button>Live Preview</Button>
-              </Link>
-              <Button variant="outline">Study Case</Button>
-              <Button variant="outline">Github</Button>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
-          <Image src={portfolio1} alt="portfolio1" />
-          <div className="w-full">
-            <h3 className="font-display text-4xl md:text-[48px] mb-4 md:mb-8">
-              Lagoonbay
-            </h3>
-            <p className="leading-7 font-light">
-              Lagoonbay For Tomorrow is an integrated residential area that
-              offers exclusive villas and a plaza. With an aesthetic beach
-              resort design, this area is strategically located and centrally
-              located in the popular tourist destination Lombok Beach.
-            </p>
-            <div className="flex gap-8 mt-4 mb-6">
-              <div>
-                <h5 className="font-bold text-xl mb-1">Tools</h5>
-                <p>Wordpress, Elementor</p>
-              </div>
-              <div>
-                <h5 className="font-bold text-xl mb-1">Duration</h5>
-                <p>2 Month</p>
-              </div>
-            </div>
-            <div className="flex gap-4 flex-wrap">
-              <Link href="https://www.lagoonbay.id/" target="_blank">
-                <Button>Live Preview</Button>
-              </Link>
-              <Button variant="outline">Study Case</Button>
-              <Button variant="outline">Github</Button>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col md:flex-row-reverse gap-8 md:gap-12 items-center">
-          <Image src={portfolio1} alt="portfolio1" />
-          <div className="w-full">
-            <h3 className="font-display text-4xl md:text-[48px] mb-4 md:mb-8 ">
-              BeasiswaKita
-            </h3>
-            <p className="leading-7 font-light">
-              We are an educational start-up that operates in the field of
-              providing scholarship information. Our vision is to provide equal
-              opportunities for everyone to access better education through the
-              dissemination of accurate and reliable scholarship information.
-            </p>
-            <div className="flex gap-8 mt-4 mb-6">
-              <div>
-                <h5 className="font-bold text-xl mb-1">Tools</h5>
-                <p>React, tailwind, figma</p>
-              </div>
-              <div>
-                <h5 className="font-bold text-xl mb-1">Duration</h5>
-                <p>2 Weeks</p>
-              </div>
-            </div>
-            <div className="flex gap-4 flex-wrap">
-              <Link href="https://beasiswakita.vercel.app/" target="_blank">
-                <Button>Live Preview</Button>
-              </Link>
-              <Button variant="outline">Study Case</Button>
-              <Button variant="outline">Github</Button>
             </div>
           </div>
         </div>
       </div>
+
       <div id="footer" className="px-5 md:px-20 py-10">
         <h1 className="font-display text-6xl md:text-[100px] leading-snug">
-          Let's get is touch!
+          Let's get in touch!
         </h1>
         <p className="w-full md:w-1/2 text-lg md:text-2xl leading-relaxed md:leading-[40px] pt-5 font-light">
           I'd love to hear from you and explore collaboration, answer your
