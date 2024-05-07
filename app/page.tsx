@@ -417,13 +417,29 @@ export default function Home() {
 
         <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-start md:items-center  my-8">
           <div className="flex gap-8 items-center ">
-            <Image src={instagramIcon} alt="instagram" />
-            <Image src={linkedIcon} alt="linkedin" />
-            <Image src={dribbbleIcon} alt="dribbble" />
-            <Image src={behanceIcon} alt="behance" />
+            <Link href="https://www.instagram.com/uimejo/" target="_blank">
+              <Image src={instagramIcon} alt="instagram" />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/melki-jonathan/"
+              target="_blank"
+            >
+              <Image src={linkedIcon} alt="linkedin" />
+            </Link>
+            <Link href="https://dribbble.com/melkijo" target="_blank">
+              <Image src={dribbbleIcon} alt="dribbble" />
+            </Link>
+            <Link
+              href="https://www.behance.net/jonathanandaraa"
+              target="_blank"
+            >
+              <Image src={behanceIcon} alt="behance" />
+            </Link>
           </div>
           <div className="border border-white py-3 px-10 rounded-full w-fit h-fit">
-            <p className="text-lg md:text-xl">hello@mejo.co</p>
+            <Link href="mailto:melkijonathan2@gmail.com" target="_blank">
+              <p className="text-lg md:text-xl">hello@mejo.co</p>
+            </Link>
           </div>
         </div>
         <div className="w-full h-0.5 bg-white"></div>

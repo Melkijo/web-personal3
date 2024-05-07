@@ -20,9 +20,9 @@ export default function Navbar() {
             <Link href="#">Contact</Link>
           </li>
         </ul>
-        <div>
+        {/* <div>
           <ModeToggle />
-        </div>
+        </div> */}
       </nav>
     </header>
   );
