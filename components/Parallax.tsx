@@ -46,8 +46,8 @@ function Parallax({ baseVelocity = 100 }: ParallaxProps) {
     baseX.set(baseX.get() + moveBy);
   });
   return (
-    <div className="mx-auto overflow-hidden mb-5 max-w-full md:max-w-[1520px]">
-      <motion.div className="flex gap-5" style={{ x }}>
+    <div className="mx-auto overflow-hidden mb-3 md:mb-5 max-w-full md:max-w-[1520px]">
+      <motion.div className="flex gap-3 md:gap-5" style={{ x }}>
         <Image
           src={heroCarousel1}
           alt="carousel"

@@ -28,9 +28,9 @@ export default function Navbar() {
         </div>
         {isMenuOpen && (
           <div className=" fixed top-0 left-0 w-full h-screen bg-background  px-5 md:px-20 ">
-            <div className="absolute right-16 top-10 z-10 ">
+            <div className="absolute right-8 md:right-16 top-10 z-10 ">
               <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <CloseIcon width={60} height={60} />
+                <CloseIcon width={50} height={50} />
               </button>
             </div>
             <ul className=" overflow-y-auto no-scrollbar w-fit mx-auto   h-full flex items-center pt-40 pb-20 flex-col gap-10 md:gap-20 text-3xl md:text-6xl font-display">
