@@ -5,11 +5,12 @@ import Link from "next/link";
 
 import { useEffect, useState } from "react";
 import { MenuIcon, CloseIcon } from "./icon";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   //get the current path
-  const path = window.location.pathname;
+  const path = usePathname();
 
   return (
     <header className="relative z-50 px-5 pb-5 pt-7 md:px-20 max-w-[1520px] mx-auto">
