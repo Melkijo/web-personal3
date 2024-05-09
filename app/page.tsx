@@ -4,17 +4,12 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import ParallaxText from "@/components/Parallax";
-import heroCarousel1 from "@/assets/hero-carousel-1.png";
-import heroCarousel2 from "@/assets/hero-carousel-2.png";
-import heroCarousel3 from "@/assets/hero-carousel-3.png";
-import heroCarousel4 from "@/assets/hero-carousel-4.png";
+
 import aboutPhoto from "@/assets/about-photo.png";
 import aboutPhoto2 from "@/assets/about-photo-2.png";
 
 import portfolio1 from "@/assets/portfolio-3.png";
 import portfolio2 from "@/assets/portfolio-2.png";
-// import cv from "@/assets/CV-2024-Melki-Jonathan-Andara.pdf";
-// import cv from "@/public/cv-2024-melki-jonathan-andara.pdf";
 
 import quotesIcon from "@/assets/quotes-icon.png";
 import hero1 from "@/assets/hero-1.png";
@@ -28,12 +23,10 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 import { useRef } from "react";
-import { useInView } from "framer-motion";
+
 import {
   BehanceIcon,
   DribbbleIcon,
@@ -114,48 +107,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <Carousel
-        opts={{
-          align: "start",
-          loop: true,
-        }}
-        plugins={[
-          Autoplay({
-            delay: 1000,
-            jump: false,
-            stopOnInteraction: false,
-            stopOnMouseEnter: true,
-          }),
-        ]}
-        className="w-full bg-gradient-to-b from-secondary to-background"
-      >
-        <CarouselContent>
-          <CarouselItem className="basis-8/12 md:basis-1/4">
-            <Image src={heroCarousel1} alt="carousel" />
-          </CarouselItem>
-          <CarouselItem className="basis-8/12 md:basis-1/4">
-            <Image src={heroCarousel2} alt="carousel" />
-          </CarouselItem>
-          <CarouselItem className="basis-8/12 md:basis-1/4">
-            <Image src={heroCarousel1} alt="carousel" />
-          </CarouselItem>
-          <CarouselItem className="basis-8/12 md:basis-1/4">
-            <Image src={heroCarousel2} alt="carousel" />
-          </CarouselItem>
-          <CarouselItem className="basis-8/12 md:basis-1/4">
-            <Image src={heroCarousel3} alt="carousel" />
-          </CarouselItem>
-          <CarouselItem className="basis-8/12 md:basis-1/4">
-            <Image src={heroCarousel1} alt="carousel" />
-          </CarouselItem>
-          <CarouselItem className="basis-8/12 md:basis-1/4">
-            <Image src={heroCarousel4} alt="carousel" />
-          </CarouselItem>
-          <CarouselItem className="basis-8/12 md:basis-1/4">
-            <Image src={heroCarousel2} alt="carousel" />
-          </CarouselItem>
-        </CarouselContent>
-      </Carousel> */}
       <div className="bg-gradient-to-b from-secondary to-background">
         <ParallaxText baseVelocity={5} />
         <ParallaxText baseVelocity={-5} />
@@ -488,7 +439,7 @@ export default function Home() {
               Other work
             </h3>
             <div className="block md:flex justify-center">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-7">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-7">
                 <Link
                   href="https://www.instagram.com/uimejo/"
                   target="_blank"

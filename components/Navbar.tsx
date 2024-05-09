@@ -15,9 +15,11 @@ export default function Navbar() {
   return (
     <header className="relative z-50 px-5 pb-5 pt-7 md:px-20 max-w-[1520px] mx-auto">
       <nav className="flex items-center justify-between">
-        <div className="text-2xl font-black">
-          MEJO<span className="text-primary">DEV</span>
-        </div>
+        <Link href="/">
+          <div className="text-2xl font-black ">
+            MEJO<span className="text-primary">DEV</span>
+          </div>
+        </Link>
 
         <div className="block ">
           <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -25,20 +27,20 @@ export default function Navbar() {
           </button>
         </div>
         {isMenuOpen && (
-          <div className=" fixed top-0 left-0 w-full h-screen bg-background  px-5 md:px-20 py-10">
-            <div className="flex justify-end ">
+          <div className=" fixed top-0 left-0 w-full h-screen bg-background  px-5 md:px-20 ">
+            <div className="absolute right-16 top-10 z-10 ">
               <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <CloseIcon width={40} height={40} />
+                <CloseIcon width={60} height={60} />
               </button>
             </div>
-            <ul className=" overflow-y-hidden h-full flex items-center justify-center  flex-col gap-10 md:gap-20 text-3xl md:text-6xl font-display">
+            <ul className=" overflow-y-auto no-scrollbar w-fit mx-auto   h-full flex items-center pt-40 pb-20 flex-col gap-10 md:gap-20 text-3xl md:text-6xl font-display">
               <li>
                 <Link
                   href="/"
                   className={
                     path == "/"
-                      ? `text-green-300`
-                      : `text-white hover:text-green-300`
+                      ? `text-primary`
+                      : `text-white hover:text-primary`
                   }
                 >
                   Home
@@ -49,8 +51,8 @@ export default function Navbar() {
                   href="/#portfolio"
                   className={
                     path == "/portfolio"
-                      ? `text-green-300`
-                      : `text-white hover:text-green-300`
+                      ? `text-primary`
+                      : `text-white hover:text-primary`
                   }
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
@@ -63,8 +65,8 @@ export default function Navbar() {
                   href="/about"
                   className={
                     path == "/about"
-                      ? `text-green-300`
-                      : `text-white hover:text-green-300`
+                      ? `text-primary`
+                      : `text-white hover:text-primary`
                   }
                 >
                   About
@@ -72,15 +74,20 @@ export default function Navbar() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/contact"
                   className={
                     path == "/contact"
-                      ? `text-green-300`
-                      : `text-white hover:text-green-300`
+                      ? `text-primary`
+                      : `text-white hover:text-primary`
                   }
                 >
                   Contact
                 </Link>
+              </li>
+              <li>
+                <div className="text-4xl font-black mt-20">
+                  MEJO<span className="text-primary">DEV</span>
+                </div>
               </li>
             </ul>
           </div>

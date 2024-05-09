@@ -1,4 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'www.coursera.org',
+                port: '',
+                pathname: '/account/**',
+            },
+        ],
+    },
+};
 
 export default nextConfig;
