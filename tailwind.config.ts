@@ -21,6 +21,9 @@ const config = {
         fontFamily: {
             display: ["var(--font-dela-gothic-one)"],
         },
+        screens:{
+            "md": "1024px",
+        },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
