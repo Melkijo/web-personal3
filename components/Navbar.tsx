@@ -28,6 +28,7 @@ export default function Navbar() {
         </div>
         {isMenuOpen && (
           <div className=" fixed top-0 left-0 w-full h-screen bg-background  px-5 md:px-20 ">
+            {/* <div className="max-w-[1520px] mx-auto relative"> */}
             <div className="absolute right-8 md:right-16 top-10 z-10 ">
               <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 <CloseIcon width={50} height={50} />
@@ -91,6 +92,7 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
+          //   </div>
         )}
       </nav>
     </header>

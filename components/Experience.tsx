@@ -1,16 +1,20 @@
 export default function Experience(props: any) {
   return (
     <div className="flex flex-col md:flex-row justify-between w-full mb-8">
-      <div className="flex flex-col gap-0 md:gap-2 mb-3">
-        <h3 className="text-xl font-bold">{props.place}</h3>
-        <p>{props.duration}</p>
-        <p>{props.location}</p>
+      <div className="flex w-full md:w-[400px] flex-col  mb-3">
+        <h3 className="text-xl font-bold mb-2">{props.place}</h3>
+        <p className="text-gray-400 font-normal">{props.duration}</p>
+        <p className="text-gray-400 font-normal">{props.location}</p>
       </div>
-      <div className="w-full md:w-[700px] bg-gray-700 md:bg-background py-3 px-4 rounded-xl">
+      <div className="w-full md:w-[700px] bg-gray-700 md:bg-background py-3 md:py-0 px-4 rounded-xl">
         {props.works.map((work: any) => (
-          <div key={work.id} className="mb-5">
-            <h3 className="font-bold ">{work.title}</h3>
-            <p>{work.description}</p>
+          <div key={work.id} className="mb-3 ">
+            <h3 className="font-bold text-base mb-1">{work.title}</h3>
+            <div className="flex flex-col gap-1 text-base font-normal text-white md:text-gray-400">
+              {work.description.map((desc: any) => (
+                <p>- {desc}</p>
+              ))}
+            </div>
           </div>
         ))}
       </div>

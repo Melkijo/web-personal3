@@ -34,6 +34,7 @@ import {
   InstagramIcon,
   LinkedinIcon,
 } from "@/components/icon";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const ref = useRef(null);
@@ -81,8 +82,8 @@ export default function Home() {
         >
           <div className="w-fit h-fit rounded-full bg-gradient-to-r mb-4 from-green-200 to-blue-500 p-0.5 hidden md:block">
             <div className="w-full h-full  flex py-2.5 px-6 rounded-full gap-2 items-center justify-center bg-secondary  ">
-              <div className="min-w-3.5 min-h-3.5 bg-primary border border-white rounded-full"></div>
-              <p className="text-xs md:text-sm ">I'm Available </p>
+              <div className="min-w-3.5 min-h-3.5 bg-primary  rounded-full"></div>
+              <p className="text-xs md:text-sm ">Open to work </p>
             </div>
           </div>
 
@@ -246,16 +247,19 @@ export default function Home() {
             // ref={ref}
             className="flex flex-col items-center gap-8 md:flex-row md:gap-12"
           >
-            <Image
-              //   style={{
-              //     transform: isInView ? "none" : "translateX(-200px)",
-              //     opacity: isInView ? 1 : 0,
-              //     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-              //   }}
-              src={portfolio1}
-              alt="portfolio1"
-              className="w-full md:w-1/2 rounded-xl"
-            />
+            <div className="w-full  rounded-xl overflow-hidden">
+              <Image
+                //   style={{
+                //     transform: isInView ? "none" : "translateX(-200px)",
+                //     opacity: isInView ? 1 : 0,
+                //     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                //   }}
+                src={portfolio1}
+                alt="portfolio1"
+                className="w-full hover:scale-105 transition ease-in-out duration-500"
+              />
+            </div>
+
             <div className="w-full">
               <h3 className="font-display text-4xl md:text-[48px] mb-4 md:mb-8 leading-normal">
                 Scube Center
@@ -294,16 +298,18 @@ export default function Home() {
             // ref={ref}
             className="flex flex-col items-center gap-8 md:flex-row-reverse md:gap-12"
           >
-            <Image
-              //   style={{
-              //     transform: isInView ? "none" : "translateX(200px)",
-              //     opacity: isInView ? 1 : 0,
-              //     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-              //   }}
-              src={portfolio2}
-              alt="portfolio1"
-              className="w-full md:w-1/2 rounded-xl"
-            />
+            <div className="w-full  rounded-xl overflow-hidden">
+              <Image
+                //   style={{
+                //     transform: isInView ? "none" : "translateX(-200px)",
+                //     opacity: isInView ? 1 : 0,
+                //     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                //   }}
+                src={portfolio2}
+                alt="portfolio1"
+                className="w-full hover:scale-105 transition ease-in-out duration-500"
+              />
+            </div>
             <div className="w-full">
               <h3 className="font-display text-4xl md:text-[48px] mb-4 md:mb-8 leading-snug">
                 UKM Oikumene
@@ -349,16 +355,18 @@ export default function Home() {
             // ref={ref}
             className="flex flex-col items-center gap-8 md:flex-row md:gap-12"
           >
-            <Image
-              //   style={{
-              //     transform: isInView ? "none" : "translateX(-200px)",
-              //     opacity: isInView ? 1 : 0,
-              //     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-              //   }}
-              src={portfolio1}
-              alt="portfolio1"
-              className="w-full md:w-1/2 rounded-xl"
-            />
+            <div className="w-full  rounded-xl overflow-hidden">
+              <Image
+                //   style={{
+                //     transform: isInView ? "none" : "translateX(-200px)",
+                //     opacity: isInView ? 1 : 0,
+                //     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                //   }}
+                src={portfolio1}
+                alt="portfolio1"
+                className="w-full hover:scale-105 transition ease-in-out duration-500"
+              />
+            </div>
             <div className="w-full">
               <h3 className="font-display text-4xl md:text-[48px] mb-4 md:mb-8">
                 Lagoonbay
@@ -394,16 +402,18 @@ export default function Home() {
             // ref={ref}
             className="flex flex-col items-center gap-8 md:flex-row-reverse md:gap-12"
           >
-            <Image
-              //   style={{
-              //     transform: isInView ? "none" : "translateX(200px)",
-              //     opacity: isInView ? 1 : 0,
-              //     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-              //   }}
-              src={portfolio1}
-              alt="portfolio1"
-              className="w-full md:w-1/2 rounded-xl"
-            />
+            <div className="w-full  rounded-xl overflow-hidden">
+              <Image
+                //   style={{
+                //     transform: isInView ? "none" : "translateX(-200px)",
+                //     opacity: isInView ? 1 : 0,
+                //     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                //   }}
+                src={portfolio1}
+                alt="portfolio1"
+                className="w-full hover:scale-105 transition ease-in-out duration-500"
+              />
+            </div>
             <div className="w-full">
               <h3 className="font-display text-4xl md:text-[48px] mb-4 md:mb-8 ">
                 BeasiswaKita
@@ -440,34 +450,44 @@ export default function Home() {
             </h3>
             <div className="block md:flex justify-center">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-7">
-                <Link
-                  href="https://www.instagram.com/uimejo/"
-                  target="_blank"
-                  className=" w-full md:w-[200px]   h-[170px] md:h-[200px] flex justify-center items-center bg-gradient-to-tr from-[#b966ef] via-[#fd1d1d] to-[#fcb045] rounded-2xl"
-                >
-                  <InstagramIcon width={60} height={60} />
-                </Link>
-                <Link
-                  href="https://dribbble.com/melkijo"
-                  target="_blank"
-                  className=" w-full md:w-[200px] h-[170px] md:h-[200px] flex justify-center items-center bg-[#EB528D] rounded-2xl"
-                >
-                  <DribbbleIcon width={60} height={60} />
-                </Link>
-                <Link
-                  href="https://www.behance.net/jonathanandaraa"
-                  target="_blank"
-                  className=" w-full md:w-[200px] h-[170px] md:h-[200px] flex justify-center items-center bg-[#053EFF] rounded-2xl"
-                >
-                  <BehanceIcon width={60} height={60} />
-                </Link>
-                <Link
-                  href="https://github.com/Melkijo"
-                  target="_blank"
-                  className=" w-full md:w-[200px] h-[175px] md:h-[200px] flex justify-center items-center bg-[#24292E] rounded-2xl"
-                >
-                  <GithubIcon width={90} height={90} />
-                </Link>
+                <div className=" w-full md:w-[200px]   h-[170px] md:h-[200px] flex justify-center items-center bg-gradient-to-tr from-[#b966ef] via-[#fd1d1d] to-[#fcb045] rounded-2xl">
+                  <Link
+                    href="https://www.instagram.com/uimejo/"
+                    target="_blank"
+                    className=" w-full h-full flex justify-center items-center hover:rotate-[25deg] hover:scale-110 transition ease-in-out duration-500"
+                  >
+                    <InstagramIcon width={60} height={60} />
+                  </Link>
+                </div>
+                <div className=" w-full md:w-[200px] h-[170px] md:h-[200px] flex justify-center items-center bg-[#EB528D] rounded-2xl">
+                  <Link
+                    href="https://dribbble.com/melkijo"
+                    target="_blank"
+                    className=" w-full h-full flex justify-center items-center hover:rotate-[25deg] hover:scale-110 transition ease-in-out duration-500"
+                  >
+                    <DribbbleIcon width={60} height={60} />
+                  </Link>
+                </div>
+                <div>
+                  <div className=" w-full md:w-[200px] h-[170px] md:h-[200px] flex justify-center items-center bg-[#053EFF] rounded-2xl">
+                    <Link
+                      href="https://www.behance.net/jonathanandaraa"
+                      target="_blank"
+                      className=" w-full h-full flex justify-center items-center hover:rotate-[25deg] hover:scale-110 transition ease-in-out duration-500"
+                    >
+                      <BehanceIcon width={60} height={60} />
+                    </Link>
+                  </div>
+                </div>
+                <div className=" w-full md:w-[200px] h-[175px] md:h-[200px] flex justify-center items-center bg-[#24292E] rounded-2xl">
+                  <Link
+                    href="https://github.com/Melkijo"
+                    className=" w-full h-full flex justify-center items-center hover:rotate-[25deg] hover:scale-110 transition ease-in-out duration-500"
+                    target="_blank"
+                  >
+                    <GithubIcon width={90} height={90} />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -476,7 +496,7 @@ export default function Home() {
 
       <div
         id="footer"
-        className="w-full md:max-w-[1520px] mx-auto px-5 py-10 md:px-20"
+        className="w-full md:max-w-[1520px] mx-auto px-5 pt-10 md:px-20"
       >
         <h1 className="font-display text-6xl md:text-[100px] leading-snug">
           Let's get in touch!
@@ -486,28 +506,25 @@ export default function Home() {
           questions, or simply chat.
         </p>
 
-        <div className="flex flex-row items-start gap-6 my-8 md:gap-10 md:items-center">
-          <div className="flex items-center gap-4 md:gap-8 ">
+        <div className="flex  items-center  gap-6 my-8 md:gap-6 ">
+          <div className="flex items-center gap-4 md:gap-6 ">
             <Link href="https://www.instagram.com/uimejo/" target="_blank">
-              <InstagramIcon width={32} height={32} />
+              <InstagramIcon width={34} height={34} />
             </Link>
             <Link
               href="https://www.linkedin.com/in/melki-jonathan/"
               target="_blank"
             >
-              <LinkedinIcon width={32} height={32} />
+              <LinkedinIcon width={34} height={34} />
             </Link>
           </div>
           <Link href="mailto:melkijonathan2@gmail.com" target="_blank">
-            <div className="py-2 border border-white rounded-full md:py-2 px-7 md:px-9 w-fit h-fit">
-              <p className="text-lg md:text-xl">hello@mejo.co</p>
+            <div className="py-2 border border-white font-semibold hover:bg-primary rounded-full md:py-2 px-7 md:px-9 w-fit h-fit">
+              <p className="text-lg">hello@mejo.co</p>
             </div>
           </Link>
         </div>
-        <div className="w-full h-0.5 bg-white"></div>
-        <div className="flex justify-start mt-6 md:justify-end">
-          <p>&copy; {year} Build with 💖 by Mejo</p>
-        </div>
+        <Footer />
       </div>
     </>
   );
