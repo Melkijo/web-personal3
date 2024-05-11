@@ -10,6 +10,8 @@ import aboutPhoto2 from "@/assets/about-photo-2.png";
 
 import portfolio1 from "@/assets/portfolio-3.png";
 import portfolio2 from "@/assets/portfolio-2.png";
+import portfolio3 from "@/assets/portfolio-4.png";
+import portfolio4 from "@/assets/portfolio-5.png";
 
 import quotesIcon from "@/assets/quotes-icon.png";
 import hero1 from "@/assets/hero-1.png";
@@ -25,8 +27,6 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 
-import { useRef } from "react";
-
 import {
   BehanceIcon,
   DribbbleIcon,
@@ -37,9 +37,6 @@ import {
 import Footer from "@/components/Footer";
 
 export default function Home() {
-  const ref = useRef(null);
-
-  const year = new Date().getFullYear();
   return (
     <>
       <div className="hero-section relative bg-secondary h-auto md:h-[90vh] ">
@@ -76,10 +73,7 @@ export default function Home() {
           alt="mejo hero"
         />
 
-        <div
-          ref={ref}
-          className="relative z-10 flex flex-col items-center justify-start px-5 pb-20 md:px-40 pt-14 md:pt-20"
-        >
+        <div className="relative z-10 flex flex-col items-center justify-start px-5 pb-20 md:px-40 pt-14 md:pt-20">
           <div className="w-fit h-fit rounded-full bg-gradient-to-r mb-4 from-green-200 to-blue-500 p-0.5 hidden md:block">
             <div className="w-full h-full  flex py-2.5 px-6 rounded-full gap-2 items-center justify-center bg-secondary  ">
               <div className="min-w-3.5 min-h-3.5 bg-primary  rounded-full"></div>
@@ -362,8 +356,8 @@ export default function Home() {
                 //     opacity: isInView ? 1 : 0,
                 //     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
                 //   }}
-                src={portfolio1}
-                alt="portfolio1"
+                src={portfolio3}
+                alt="portfolio3"
                 className="w-full hover:scale-105 transition ease-in-out duration-500"
               />
             </div>
@@ -409,8 +403,8 @@ export default function Home() {
                 //     opacity: isInView ? 1 : 0,
                 //     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
                 //   }}
-                src={portfolio1}
-                alt="portfolio1"
+                src={portfolio4}
+                alt="portfolio4"
                 className="w-full hover:scale-105 transition ease-in-out duration-500"
               />
             </div>
@@ -436,11 +430,16 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-4">
-                <Link href="https://beasiswakita.vercel.app/" target="_blank">
+                <Link href="https://beasiswa-kita.vercel.app/" target="_blank">
                   <Button>Live Preview</Button>
                 </Link>
                 <Button variant="outline">Study Case</Button>
-                <Button variant="outline">Github</Button>
+                <Link
+                  href="https://github.com/Melkijo/beasiswaKita"
+                  target="_blank"
+                >
+                  <Button variant="outline">Github</Button>
+                </Link>
               </div>
             </div>
           </div>

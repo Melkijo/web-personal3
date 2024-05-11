@@ -12,7 +12,7 @@ export default function Experience(props: any) {
             <h3 className="font-bold text-base mb-1">{work.title}</h3>
             <div className="flex flex-col gap-1 text-base font-normal text-white md:text-gray-400">
               {work.description.map((desc: any) => (
-                <p>- {desc}</p>
+                <p key={desc}>- {desc}</p>
               ))}
             </div>
           </div>

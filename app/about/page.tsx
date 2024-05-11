@@ -74,15 +74,15 @@ export default function Page() {
                   in mind? Feel free to reach out and connect with me on:
                 </p>
               </div>
-              <div className="flex items-center gap-4   mt-6">
+              <div className="flex items-center gap-5   mt-6">
                 <Link href="https://www.instagram.com/uimejo/" target="_blank">
-                  <InstagramIcon width={32} height={32} />
+                  <InstagramIcon width={34} height={34} />
                 </Link>
                 <Link
                   href="https://www.linkedin.com/in/melki-jonathan/"
                   target="_blank"
                 >
-                  <LinkedinIcon width={32} height={32} />
+                  <LinkedinIcon width={34} height={34} />
                 </Link>
                 <Link
                   href="https://firebasestorage.googleapis.com/v0/b/blogpost-229a5.appspot.com/o/CV_2024_Melki%20Jonathan%20Andara_2.pdf?alt=media&token=a18f32e2-b39e-491d-bebf-e1fc45deab03"
@@ -112,7 +112,7 @@ export default function Page() {
 
             <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
               {certificates.map((certificate) => (
-                <Certificate key={certificate.title} {...certificate} />
+                <Certificate key={certificate.id} {...certificate} />
               ))}
             </div>
           </div>
