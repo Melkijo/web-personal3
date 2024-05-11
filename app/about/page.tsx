@@ -117,7 +117,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className="px-20">
+        <div className="px-5 md:px-20">
           <Footer />
         </div>
       </div>
