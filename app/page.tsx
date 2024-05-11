@@ -96,8 +96,12 @@ export default function Home() {
             </span>
           </h1>
           <div className="flex justify-start md:justify-center w-full gap-5 mt-5">
-            <Button>Let's Connect</Button>
-            <Button variant="ghost">Learn more</Button>
+            <Link href="/contact">
+              <Button>Contact me</Button>
+            </Link>
+            <Link href="#portfolio">
+              <Button variant="ghost">Explore</Button>
+            </Link>
           </div>
         </div>
       </div>
