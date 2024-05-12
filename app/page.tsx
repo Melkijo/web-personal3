@@ -39,7 +39,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <div className="hero-section relative bg-secondary h-auto md:h-[90vh] ">
+      <div className="hero-section relative bg-secondary h-auto  ">
         <Navbar />
         <Image
           className="absolute top-0 left-0 z-0 hidden md:block"
@@ -73,7 +73,7 @@ export default function Home() {
           alt="mejo hero"
         />
 
-        <div className="relative z-10 flex flex-col items-center justify-start px-5 pb-20 md:px-40 pt-14 md:pt-20">
+        <div className="relative z-10 flex flex-col items-center justify-start px-5 pb-20 md:px-40 pt-14 md:pt-16">
           <div className="w-fit h-fit rounded-full bg-gradient-to-r mb-4 from-green-200 to-blue-500 p-0.5 hidden md:block">
             <div className="w-full h-full  flex py-2.5 px-6 rounded-full gap-2 items-center justify-center bg-secondary  ">
               <div className="min-w-3.5 min-h-3.5 bg-primary  rounded-full"></div>
